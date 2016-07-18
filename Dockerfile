@@ -12,3 +12,5 @@ RUN cp /app/config_default.php /app/config.php && \
     echo "\$auth_config['admin'] = '\$P\$BDnkPOMPV0BMGL7YROrT9ITzwk3ZWz/';" >> /app/config.php
 
 EXPOSE 80
+
+RUN sed -i "s/array('munkireport');/array('ard','bluetooth','certificate','crashplan','directory_service','disk_report','displays_info','filevault_status','gsx','installhistory','inventory','localadmin','munkiinfo','munkireport','network','power','printer','profile','security','timemachine','warranty','wifi');/" /app/config.php
